@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/headerBar"
+        android:paddingRight="18dp"
+        android:paddingLeft="18dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@color/tealLight">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/color">
+        </ImageView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/palanquin_dark_semibold"
+            android:gravity="center"
+            android:text="Color List"
+            android:textColor="@color/white"
+            android:textSize="20dp"></TextView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="8dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginRight="18dp"
+        android:layout_marginTop="8dp"
+        android:id="@+id/showDetailColorName"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+
+        android:background="@color/white">
+        <ImageView
+            android:id="@+id/imageShowDetaileA7"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@color/brownLight">
+        </ImageView>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_width="match_parent"
+            android:layout_height="126dp">
+            <TextView
+                android:id="@+id/hexRgbCode"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_gravity="bottom"
+                android:layout_height="match_parent"
+                android:text="HEX: #224F13 / RGB(255,255,23)"
+                android:textColor="@color/tealLight"
+                android:gravity="center_horizontal|bottom">
+            </TextView>
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <GridView
+        android:layout_margin="10dp"
+        android:numColumns="auto_fit"
+        android:id="@+id/listOfPopularColor"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:layout_below="@+id/showDetailColorName"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </GridView>
+
+</LinearLayout>
